@@ -7,8 +7,12 @@ mocha 03_open_door.js
 */
 
 function openDoor(input) {
-    // Your code here
-
+    // returns true if "Simon" & hasCoffee hash with at least one object
+    if(item.name == 'Simon', item.hasCoffee >= 1)
+        return true
+    // otherwise, returns false
+    else 
+        return false
 }
 
 function makeItem(name, hasCoffee) {
