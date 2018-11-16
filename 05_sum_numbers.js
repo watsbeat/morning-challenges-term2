@@ -3,11 +3,31 @@
 // Test your solution:
 // mocha 05_sum_numbers.js
 
+/* 
+    Try Kieran's reduce method!
+
+    x = [1, 2, 3, 4]
+    y = x.reduce(add, 0) // 0 is default if you don't set the current
+
+*/
+
 function findWinner(players) {
-    // Your code here
-
+    // iterate through players array to find highest score (number)
+    // return player name with highest score
+    let highestScore = 0
+    let name = ''
+    for (let player of players) {
+        let totalScore = 0
+        for (let score of player.scores) {
+            totalScore += score
+        }
+        if (totalScore > highestScore) {
+           highestScore = totalScore
+           name = player.name 
+        }
+    }
+    return name
 }
-
 
 var assert = require('assert');
 
@@ -19,6 +39,8 @@ class Player {
 }
 
 let players = []
+
+// Test
 describe('findWinner', function () {
     it('Should return the winner when winner is first in array', function () {
         players = [new Player('James', [50, 100, 85], new Player('Nathan', [55, 90, 86]))]
