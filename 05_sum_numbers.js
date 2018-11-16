@@ -7,7 +7,13 @@
     Try Kieran's reduce method!
 
     x = [1, 2, 3, 4]
+
+    function add (a, b) {
+        return a + b
+    }
+
     y = x.reduce(add, 0) // 0 is default if you don't set the current
+    y = 10
 
 */
 
