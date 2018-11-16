@@ -6,14 +6,24 @@ Morning Challenge 2
 2. Return whichever is the largest.
 */
 
-let largestNumber = 0
-
 function largestNumber(arr) {
-    let arr = [] // set empty array for numbers
-    for(let num of arr) {// iterate through array
-        largestNumber += num
+    let largest
+    for(let num in arr) { // for in or for of?
+        if (largest) {
+            if (arr[num] != NaN && arr[num] > largest) {
+                largest = arr[num]
+            }
+        } else {
+            if (arr[num] != NaN) {
+                largest = arr[num] // ignores invalid array entries
+            }
+        }
     }
-    return largestNumber
+    if (largest) {
+        return largest // returns the largest number
+    } else {
+        return null // returns null if the array is empty
+    }
 }
 
 var assert = require('assert');
