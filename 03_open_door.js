@@ -6,13 +6,22 @@ Test your solution:
 mocha 03_open_door.js
 */
 
+/* Solution A */
 function openDoor(input) {
-    // returns true if "Simon" & hasCoffee hash with at least one object
-    if(item.name == 'Simon', item.hasCoffee >= 1)
+    if(item.name === 'Simon'  && item.hasCoffee == true) {
         return true
-    // otherwise, returns false
-    else 
+    } 
+    else if (item.name !== 'Simon' && item.hasCoffe == true) { // Get help fixing this!
         return false
+    }
+    else { 
+        return false
+    }
+}
+
+/* Solution B */
+function openDoor(input) {
+    return input.map(item => item.name === 'Simon' && item.hasCoffee).includes(true)
 }
 
 function makeItem(name, hasCoffee) {
