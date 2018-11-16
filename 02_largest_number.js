@@ -1,16 +1,19 @@
-/*
-Largest Number
-Write a method that will take an array of numbers
-and return whichever is the largest.
+/* LARGEST NUMBER
 
-Test your solution:
-mocha 02_largest_number.js
-(You'll need mocha installed first: `npm install mocha -g`)
+Morning Challenge 2
+--------------------
+1. Write a method that will take an array of numbers
+2. Return whichever is the largest.
 */
 
+let largestNumber = 0
+
 function largestNumber(arr) {
-    // Your code here
-    // Google JS syntax ;)
+    let arr = [] // set empty array for numbers
+    for(let num of arr) {// iterate through array
+        largestNumber += num
+    }
+    return largestNumber
 }
 
 var assert = require('assert');
