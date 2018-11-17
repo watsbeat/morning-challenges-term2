@@ -11,7 +11,7 @@ function openDoor(input) {
     if(item.name === 'Simon'  && item.hasCoffee == true) {
         return true
     } 
-    else if (item.name !== 'Simon' && item.hasCoffe == true) { // Get help fixing this!
+    if (item.name == 'Simon' && item.hasCoffee.contains > 1) { // Get help fixing this! .length .contains .includes
         return false
     }
     else { 
@@ -20,9 +20,9 @@ function openDoor(input) {
 }
 
 /* Solution B */
-function openDoor(input) {
-    return input.map(item => item.name === 'Simon' && item.hasCoffee).includes(true)
-}
+// function openDoor(input) {
+//     return input.map(item => item.name === 'Simon' && item.hasCoffee).includes(true)
+// }
 
 function makeItem(name, hasCoffee) {
     item = new Object()
