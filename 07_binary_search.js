@@ -14,10 +14,24 @@ Example:
 
 */
 
-function binarySearch(binaryArray, searchValue) {
-    // Your code here
+function binarySearch(sortedArray, searchValue) {
+    let count = 0
+    let start = 0
+    let end = sortedArray.length
+    let mid = Math.floor((start + end) / 2)
+    for (let x = 0; x <= sortedArray.length / 2; x++) {
+        count += 1
+        if (sortedArray[mid] === searchValue) {
+            return [mid, count]
+        } else if (sortedArray[mid] < searchValue) {
+            start = mid
+            mid = Math.floor((start + end) / 2)
+        } else {
+            end = mid
+            mid = Math.floor((start + end) / 2)
+        }
+    }
 }
-
 
 let assert = require('assert')
 
