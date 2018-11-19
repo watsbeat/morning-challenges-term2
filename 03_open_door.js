@@ -8,15 +8,12 @@ mocha 03_open_door.js
 
 /* Solution A */
 function openDoor(input) {
-    if(item.name === 'Simon'  && item.hasCoffee == true) {
-        return true
-    } 
-    if (item.name == 'Simon' && item.hasCoffee.contains > 1) { // Get help fixing this! .length .contains .includes
-        return false
+    for (let person of input) {
+        if(person.name === 'Simon'  && person.hasCoffee == true) {
+            return true
+        } 
     }
-    else { 
-        return false
-    }
+    return false
 }
 
 /* Solution B */
